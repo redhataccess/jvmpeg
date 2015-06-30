@@ -9,7 +9,7 @@ var resolveEnvVar = function(envVar) {
 };
 
 var generateMongoUrl = function(db) {
-    let openShiftMongoAddr = resolveEnvVar("OPENSHIFT_MONGODB_DB_URL");
+    var openShiftMongoAddr = resolveEnvVar("OPENSHIFT_MONGODB_DB_URL");
     if (openShiftMongoAddr) {
         return `${openShiftMongoAddr}jvmpeg`;
     }
