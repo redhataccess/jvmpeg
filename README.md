@@ -2,6 +2,9 @@
 
 A React.js, Webpack, ES6, isomophic, Flux (Marty) Red Hat Access Labs application that parses top output and thread dumps and correlates high CPU consuming threads.
 
+
+![Example output](https://cloud.githubusercontent.com/assets/2019830/8430707/69257ab8-1f01-11e5-8ee3-ed3ec1b79175.png "Example Output")
+
 ## Features
 
 * Compilation with Webpack
