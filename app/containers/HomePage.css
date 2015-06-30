@@ -1,0 +1,47 @@
+body {
+	background: #eee;
+}
+
+.home {
+	opacity: 1;
+}
+
+.home.loading {
+	opacity: 0.2;
+	transition: opacity 600ms;
+}
+
+.home .loadingElement {
+	display: none;
+}
+
+.home.loading .loadingElement {
+	display: inherit;
+}
+
+.loadingElement {
+	float: right;
+}
+
+.dropzone {
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    /*width: 250px !important;*/
+    width: 100% !important;
+    height: 100px !important;
+    border: 1px dashed;
+    cursor: pointer;
+}
+
+.dropzone:hover {
+    background-color: #bfb;
+}
+
+.dropzone div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.green {
+    color: green;
+}

@@ -1,0 +1,438 @@
+{
+ "1421950038000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "97.2",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.1g 3.2g  18m R 97.2 10.2   1369:40 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950059000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "101.2",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.1g 3.2g  18m R 101.2 10.2   1370:00 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950080000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "99.2",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.1g 3.2g  18m R 99.2 10.2   1370:21 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1938)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- None"
+   ]
+  }
+ },
+ "1421950102000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "97.1",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.1g 3.2g  18m R 97.1 10.2   1370:41 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950123000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "99.1",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 99.1 10.2   1371:02 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950144000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "97.1",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 97.1 10.2   1371:22 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.size(StoreQueueCursor.java:168)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1929)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- None"
+   ]
+  }
+ },
+ "1421950403000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "97.1",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 97.1 10.2   1375:39 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950424000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "99.1",
+    "mem": "10.2",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 99.1 10.2   1376:00 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950445000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "99.1",
+    "mem": "10.3",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 99.1 10.3   1376:20 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.reset(StoreQueueCursor.java:156)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1961)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950466000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "100.8",
+    "mem": "10.3",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 100.8 10.3   1376:41 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at java.util.HashMap$FrontCache.<init>(HashMap.java:1054)",
+    "at java.util.HashMap$FrontCache.<init>(HashMap.java:1023)",
+    "at java.util.HashMap.<init>(HashMap.java:225)",
+    "at org.apache.activemq.broker.region.cursors.OrderedPendingList.<init>(OrderedPendingList.java:33)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1991)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3cd5848> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950487000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "99.0",
+    "mem": "10.3",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 99.0 10.3   1377:01 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421950508000": {
+  "0x2165": {
+   "process": {
+    "pid": "8549",
+    "hexpid": "0x2165",
+    "cpu": "96.9",
+    "mem": "10.3",
+    "proc_line": "8549 jboss  20   0 14.2g 3.2g  18m R 96.9 10.3   1377:22 java"
+   },
+   "thread": [
+    "\"ActiveMQ Broker[amq] Scheduler\" daemon prio=10 tid=0x00007f0eac233800 nid=0x2165 runnable [0x00007f0f16b3c000]",
+    "java.lang.Thread.State: RUNNABLE",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.getNextCursor(StoreQueueCursor.java:288)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.cursors.StoreQueueCursor.hasNext(StoreQueueCursor.java:126)",
+    "- locked <0x00000005f5653060> (a org.apache.activemq.broker.region.cursors.StoreQueueCursor)",
+    "at org.apache.activemq.broker.region.Queue.doPageInForDispatch(Queue.java:1962)",
+    "at org.apache.activemq.broker.region.Queue.pageInMessages(Queue.java:2182)",
+    "at org.apache.activemq.broker.region.Queue.doBrowse(Queue.java:1183)",
+    "at org.apache.activemq.broker.region.Queue.expireMessages(Queue.java:977)",
+    "at org.apache.activemq.broker.region.Queue.access$100(Queue.java:103)",
+    "at org.apache.activemq.broker.region.Queue$2.run(Queue.java:147)",
+    "at org.apache.activemq.thread.SchedulerTimerTask.run(SchedulerTimerTask.java:33)",
+    "at java.util.TimerThread.mainLoop(Timer.java:555)",
+    "at java.util.TimerThread.run(Timer.java:505)",
+    "Locked ownable synchronizers:",
+    "- <0x00000005f3c9b860> (a java.util.concurrent.locks.ReentrantReadWriteLock$NonfairSync)"
+   ]
+  }
+ },
+ "1421958759000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "100.0",
+    "mem": "27.6",
+    "proc_line": "8459 jboss  20   0 14.4g 8.7g  18m R 100.0 27.6  16:03.18 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ },
+ "1421958797000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "100.2",
+    "mem": "27.6",
+    "proc_line": "8459 jboss  20   0 14.4g 8.7g  18m R 100.2 27.6  16:37.22 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ },
+ "1421958828000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "100.1",
+    "mem": "27.6",
+    "proc_line": "8459 jboss  20   0 14.4g 8.7g  18m R 100.1 27.6  17:03.89 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ },
+ "1421958855000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "100.0",
+    "mem": "27.6",
+    "proc_line": "8459 jboss  20   0 14.4g 8.7g  18m R 100.0 27.6  17:27.35 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ },
+ "1421958885000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "99.6",
+    "mem": "27.7",
+    "proc_line": "8459 jboss  20   0 14.5g 8.7g  18m R 99.6 27.7  17:55.21 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ },
+ "1421958915000": {
+  "0x210b": {
+   "process": {
+    "pid": "8459",
+    "hexpid": "0x210b",
+    "cpu": "99.7",
+    "mem": "27.7",
+    "proc_line": "8459 jboss  20   0 14.5g 8.7g  18m R 99.7 27.7  18:21.90 java"
+   },
+   "thread": [
+    "\"VM Thread\" prio=10 tid=0x00007f0f88dc6000 nid=0x210b runnable"
+   ]
+  }
+ }
+}
