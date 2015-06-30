@@ -14,7 +14,6 @@ module.exports = function(options) {
     var bodyParser = require('body-parser');
 
     var app = express();
-    var port = process.env.PORT || options.defaultPort || 8080;
     var server = require('http').Server(app);
 
     // load bundle information from stats
@@ -25,13 +24,8 @@ module.exports = function(options) {
     var commonsUrl = stats.assetsByChunkName.commons && publicPath + [].concat(stats.assetsByChunkName.commons)[0];
 
     var ipAddress = options.ipAddress || '127.0.0.1';
+    var port = options.port || 8080;
     var env = options.env || 'development';
-    if (process.env['OPENSHIFT_DATA_DIR'] != null) {
-        env = 'production';
-        console.log("Env is Openshift/" + env + ", ip: " + ipAddress + " port: " + port);
-    } else {
-        console.log("Env is " + env + ", ip: " + ipAddress + " port: " + port);
-    }
 
     console.log("styleUrl: " + styleUrl);
     console.log("scriptUrl: " + scriptUrl);
@@ -39,7 +33,7 @@ module.exports = function(options) {
 
     require('marty').HttpStateSource.removeHook('parseJSON');
 
-    console.log('Running server http://' + ipAddress + ':' + port);
+    console.log("Env is " + env + ', running server http://' + ipAddress + ':' + port);
     server.listen(port, ipAddress);
 
     process.on('SIGTERM', function() {
@@ -49,7 +43,7 @@ module.exports = function(options) {
 
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'ejs');
-    app.set('port', process.env.PORT || 8080);
+    app.set('port', port);
 
     app.use(morgan('dev'));
     // Set the limit otherwise larger payloads can cause 'Request Entity Too Large'
