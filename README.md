@@ -97,12 +97,6 @@ Use the [analyse tool](http://webpack.github.io/analyse/) with the file at `buil
 
 Many file types are preconfigured, but not every loader is installed. If you get an error like `Cannot find module "xxx-loader"`, you'll need to install the loader with `npm install xxx-loader --save` and restart the compilation.
 
-## Pushing to labsdev
-
-```
-gg c Message
-git tag x.y.z && git push --tags labsdev master
-```
 
 ## Common changes to the configuration
 
@@ -127,6 +121,13 @@ Coffeescript is not installed/enabled by default to not distrub non-coffee devel
 
 1. `npm install coffee-redux-loader --save`
 2. In `make-webpack-config.js` add `".coffee"` to the `var extensions = ...` line.
+
+## Handling deployment to ITOS
+
+```
+gg c Message
+git tag x.y.z && git push && git push --tags labsdev master && git push --tags gitlab master
+```
 
 ## License
 
