@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Change home directory (bower puts a lot of cache and tmp directories here)
+HOME=$OPENSHIFT_REPO_DIR
+cd $OPENSHIFT_REPO_DIR
+
+mkdir -p "$OPENSHIFT_DATA_DIR"node_modules
+
+ln -s "$OPENSHIFT_DATA_DIR"node_modules node_modules
+
+npm install --loglevel error
+
+# Prune some unecessary files from node_modules
+find node_modules/* -type f -iname "*.md" -o -type d -name "test*" -o -type d -name "example*" | xargs rm -rf
+
+# Run the webpack production build
+npm run build
