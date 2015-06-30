@@ -1,6 +1,6 @@
 # JVMPeg
 
-A React.js, Webpack, ES6, isomophic, Flux (Marty) Red Hat Access Labs application that parses top output and thread dumps and correlates high CPU consuming threads.
+A React.js, Webpack, ES6, isomorphic, Flux (Marty) Red Hat Access Labs application that parses top output and thread dumps and correlates high CPU consuming threads.
 
 
 ![Example output](https://cloud.githubusercontent.com/assets/2019830/8430750/e2c8214a-1f01-11e5-8de4-ec40c93c72cf.png "Example Output")
