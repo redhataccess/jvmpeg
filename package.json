@@ -1,8 +1,8 @@
 {
-  "name": "react-starter",
-  "version": "0.0.0",
+  "name": "jvmpeg",
+  "version": "0.0.1",
   "description": "",
-  "main": "app/app.js",
+  "main": "server/server-production.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "webpack-dev-server --config webpack-dev-server.config.js --progress --colors --port 2992 --inline",
@@ -14,11 +14,10 @@
   "keywords": [
     "webpack",
     "react",
-    "starter",
-    "boilerplate",
-    "hot"
+    "java",
+    "analysis"
   ],
-  "author": "Tobias Koppers @sokra",
+  "author": "Samuel Mendenhall",
   "license": "MIT",
   "dependencies": {
     "async": "^1.2.1",
