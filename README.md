@@ -97,6 +97,13 @@ Use the [analyse tool](http://webpack.github.io/analyse/) with the file at `buil
 
 Many file types are preconfigured, but not every loader is installed. If you get an error like `Cannot find module "xxx-loader"`, you'll need to install the loader with `npm install xxx-loader --save` and restart the compilation.
 
+## Pushing to labsdev
+
+```
+gg c Message
+git tag 1.0.0 && git push --tags labsdev
+```
+
 ## Common changes to the configuration
 
 ### Switch devtool to SourceMaps
