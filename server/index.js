@@ -87,8 +87,8 @@ module.exports = function(options) {
     }));
 
     // There are certain Access Labs urls that are being prefixed with /labs, let's catch and fix that.
-    app.get(/^\/labs\/(chrome_themes|webassets|services|click|suggest)/, function(req, res, next) {
-        var newUrl = req.url.replace("/labs", "");
+    app.get(/^\/labs\/jvmpeg\/(results\/)?(chrome_themes|webassets|services|click|suggest)/, function(req, res, next) {
+        var newUrl = req.url.replace("/labs/jvmpeg/results", "").replace("/labs");
         console.log("Redirecting url:" + req.url + " to " + newUrl);
         res.redirect(newUrl);
     });

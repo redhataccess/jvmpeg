@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'test') {
     app.rehydrate();
 
     if (Marty.isBrowser) {
-        // If something needs only be run in browser.
+        // Browser specific code
     }
 
     app.router.run(function (Handler, state) {

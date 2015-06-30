@@ -26,4 +26,4 @@ class OffenderStore extends Marty.Store {
     }
 }
 
-module.exports = OffenderStore;
+module.exports = OffenderStore
