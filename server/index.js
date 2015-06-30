@@ -7,7 +7,6 @@ module.exports = function(options) {
     var fs = require('fs');
     var _ = require('lodash');
     var util = require('util');
-    var settings = require('./settings');
     var path = require('path');
     var morgan = require('morgan');
     var express = require('express');
@@ -25,7 +24,7 @@ module.exports = function(options) {
     var scriptUrl = publicPath + [].concat(stats.assetsByChunkName.main)[0]; // + "?" + stats.hash;
     var commonsUrl = stats.assetsByChunkName.commons && publicPath + [].concat(stats.assetsByChunkName.commons)[0];
 
-    var ipAddress = settings.resolveEnvVar('OPENSHIFT_NODEJS_IP') || settings.resolveEnvVar('OPENSHIFT_NODEDIY_IP') || '127.0.0.1';
+    var ipAddress = options.ipAddress || '127.0.0.1';
     var env = options.env || 'development';
     if (process.env['OPENSHIFT_DATA_DIR'] != null) {
         env = 'production';

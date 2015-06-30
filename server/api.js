@@ -1,11 +1,12 @@
 var { generateMongoUrl } = require('./settings');
 
 var mongoUrl    = generateMongoUrl();
-//console.log(`Connecting to mongo with ${mongoUrl}`);
 var assign      = require("lodash/object/assign");
 var Promise     = require("bluebird");
 var MongoDB     = Promise.promisifyAll(require("mongodb"));
 var MongoClient = Promise.promisifyAll(MongoDB.MongoClient);
+
+console.log(`Connecting to mongo with ${mongoUrl}`);
 
 // http://stackoverflow.com/questions/23597059/promise-and-nodejs-mongodb-driver
 module.exports = function(app) {
