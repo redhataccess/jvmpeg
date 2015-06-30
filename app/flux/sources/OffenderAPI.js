@@ -7,7 +7,7 @@ export default class OffenderAPI extends Marty.HttpStateSource {
         this.baseUrl = 'http://foo.redhat.com';
     }
     getOffender(_id) {
-        return this.get(`/api/offender/${_id}`).then(res => {
+        return this.get(`/labs/jvmpeg/api/offender/${_id}`).then(res => {
             if (res.ok) {
                 return res.json();
             }
@@ -17,7 +17,7 @@ export default class OffenderAPI extends Marty.HttpStateSource {
     saveOffender(offender) {
         let options = {
             type: "POST",
-            url: `/api/offender`,
+            url: `/labs/jvmpeg/api/offender`,
             contentType: "application/json",
             processData: false,
             data: JSON.stringify(offender)

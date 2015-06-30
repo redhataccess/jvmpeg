@@ -101,7 +101,7 @@ Many file types are preconfigured, but not every loader is installed. If you get
 
 ```
 gg c Message
-git tag 1.0.0 && git push --tags labsdev
+git tag x.y.z && git push --tags labsdev master
 ```
 
 ## Common changes to the configuration

@@ -1,4 +1,4 @@
-var { generateMongoUrl } = require('./settings');
+var { generateMongoUrl, urlPrefix } = require('./settings');
 
 var mongoUrl    = generateMongoUrl();
 var assign      = require("lodash/object/assign");
@@ -10,7 +10,7 @@ console.log(`Connecting to mongo with ${mongoUrl}`);
 
 // http://stackoverflow.com/questions/23597059/promise-and-nodejs-mongodb-driver
 module.exports = function(app) {
-	app.get("/api/offender/:_id", function(req, res) {
+	app.get(`${urlPrefix}/api/offender/:_id`, function(req, res) {
 		var _id = req.params._id;
         console.log(`Fetching: ${_id} from mongo.`);
 		res.setHeader("Content-Type", "application/json");
@@ -25,7 +25,7 @@ module.exports = function(app) {
             });
 	});
 
-    app.post("/api/offender", function(req, res) {
+    app.post(`${urlPrefix}/api/offender`, function(req, res) {
     	res.setHeader("Content-Type", "application/json");
         let offender = req.body;
     	offender = assign(req.body, {created: +(new Date())});

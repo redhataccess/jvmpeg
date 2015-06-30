@@ -16,5 +16,6 @@ var generateMongoUrl = function(db) {
     return "mongodb://localhost:27017/jvmpeg";
 };
 
+exports.urlPrefix = "/labs/jvmpeg";
 exports.generateMongoUrl = generateMongoUrl;
 exports.resolveEnvVar = resolveEnvVar;
