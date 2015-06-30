@@ -4,7 +4,7 @@ import Promise from 'bluebird';
 export default class OffenderAPI extends Marty.HttpStateSource {
     constructor(options) {
         super(options);
-        this.baseUrl = 'http://foo.redhat.com';
+        //this.baseUrl = 'http://foo.redhat.com';
     }
     getOffender(_id) {
         return this.get(`/labs/jvmpeg/api/offender/${_id}`).then(res => {
