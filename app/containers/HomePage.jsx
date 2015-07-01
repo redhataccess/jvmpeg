@@ -202,7 +202,7 @@ class HomePage extends React.Component {
             <Grid className={cx(containerCx)}>
                 <Row>
                     <Col md={12}>
-                        <h1><Link to="home">JVMPeg</Link></h1>
+                        <h1>JVMPeg</h1>
                         <p>This tool will help you analyze JVM threads that are pegging the CPU above a specified threshold</p>
                     </Col>
                 </Row>

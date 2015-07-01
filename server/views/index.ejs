@@ -32,6 +32,9 @@
 <script type="text/javascript" src="<%- COMMONS_URL %>"></script>
 <% } %>
 <script type="text/javascript">
+    // Required!
+    breadcrumbs = [['Labs', '/labs/'], ['JVMPeg', '/lab/jvmpeg/']];
+
     chrometwo_require([], function () {
         //require.s.contexts._.config.urlArgs = "bust=#{uid}";
         var script = document.createElement('script');
