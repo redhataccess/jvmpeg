@@ -28,13 +28,17 @@
         </div>
     </div>
 </div>
+<!-- This is the marty state for rehydration to the stores once the browser js kicks in -->
+<%- state %>
+<!-- If using the commons in webpack. Not currently hence the dev testing-->
 <% if (ENV == 'development' && COMMONS_URL) { %>
 <script type="text/javascript" src="<%- COMMONS_URL %>"></script>
 <% } %>
 <script type="text/javascript">
-    // Required!
+    // Red Hat Chrome theme breadcrumbs
     breadcrumbs = [['Labs', '/labs/'], ['JVMPeg', '/lab/jvmpeg/']];
 
+    <!-- When using the Red Hat Chrome theme must add in the webapp js after the theme loads, only way to roll this one. -->
     chrometwo_require([], function () {
         //require.s.contexts._.config.urlArgs = "bust=#{uid}";
         var script = document.createElement('script');
