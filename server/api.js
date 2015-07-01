@@ -10,10 +10,10 @@ console.log(`Connecting to mongo with ${mongoUrl}`);
 
 // http://stackoverflow.com/questions/23597059/promise-and-nodejs-mongodb-driver
 module.exports = function(app) {
-	app.get(`${urlPrefix}/api/offender/:_id`, function(req, res) {
-		var _id = req.params._id;
+    app.get(`${urlPrefix}/api/offender/:_id`, function(req, res) {
+        var _id = req.params._id;
         console.log(`Fetching: ${_id} from mongo.`);
-		res.setHeader("Content-Type", "application/json");
+        res.setHeader("Content-Type", "application/json");
         MongoClient.connectAsync(mongoUrl).then((db) => db.collection("results").findOneAsync({_id: _id}))
             .then((doc) => {
                 console.log(`Found doc with length: ${JSON.stringify(doc, null, ' ').length}`);
@@ -23,12 +23,12 @@ module.exports = function(app) {
                 console.error(err);
                 res.status(500).send(err);
             });
-	});
+    });
 
     app.post(`${urlPrefix}/api/offender`, function(req, res) {
-    	res.setHeader("Content-Type", "application/json");
+        res.setHeader("Content-Type", "application/json");
         let offender = req.body;
-    	offender = assign(req.body, {created: +(new Date())});
+        offender = assign(req.body, {created: +(new Date())});
         MongoClient.connectAsync(mongoUrl).then((db) => db.collection("results").insertOneAsync(offender))
             .then((result) => res.send({status: "success", _id: offender._id}))
             .catch((err) => {

@@ -193,8 +193,8 @@ class HomePage extends React.Component {
         };
         return <i className={cx(spinnerClasses)}></i>
     }
-	render() {
-		let { loading } = this.props;
+    render() {
+        let { loading } = this.props;
         let containerCx = {
             'home': loading
         };
@@ -254,7 +254,7 @@ class HomePage extends React.Component {
                 </Row>
             </Grid>
         );
-	}
+    }
 }
 
 // It is a bit unclear exactly how React is aware of react-router consider this is not IoC wired that I can see

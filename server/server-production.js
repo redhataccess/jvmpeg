@@ -10,8 +10,8 @@ var babelCachePath = settings.resolveEnvVar('BABEL_CACHE_PATH');
 process.env.BABEL_CACHE_PATH = babelCachePath || (dataDir && dataDir + "/.babel.json") || (homeDir && homeDir + "/.babel.json");
 
 require("./index")({
-	env: 'production',
+    env: 'production',
     separateStylesheet: true,
     ipAddress: ipAddress,
-	port: port
+    port: port
 });

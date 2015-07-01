@@ -17,9 +17,9 @@ class ResultsPage extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
-	static getProps() {
-		return {};
-	}
+    static getProps() {
+        return {};
+    }
     renderOffenders(offenders) {
 
         // The keys are unix timestamps, but in string format, sort by the int value and map those
@@ -31,7 +31,7 @@ class ResultsPage extends React.Component {
             {offenderPanels}
         </div>;
     }
-	render() {
+    render() {
         let cpuThreshold = this.props.offender.cpuThreshold;
 
         // Remove the _id and created from the mongo result
@@ -40,14 +40,14 @@ class ResultsPage extends React.Component {
         if (offenders == null || Object.keys(offenders).length == 0) {
             return <Alert bsStyle="warning">No offending processes found within the threshold specified.</Alert>;
         }
-		return <div>
+        return <div>
             <h3>{`Found ${Object.keys(offenders).length} occurrence(s) of processes using over ${cpuThreshold}% CPU usage.`}</h3>
             <Spacer />
-			<div>
+            <div>
                 {this.renderOffenders(offenders)}
             </div>
-		</div>;
-	}
+        </div>;
+    }
 }
 
 module.exports = Marty.createContainer(ResultsPage, {
