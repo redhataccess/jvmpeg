@@ -1,7 +1,7 @@
 import React from "react";
 import Marty from "marty";
 import { RouteHandler, Link } from "react-router";
-import Dropzone from "react-dropzone";
+import Dropzone from "../components/Dropzone.jsx";
 import Spacer from "../components/Spacer";
 import FileDropDisplay from "../components/FileDropDisplay";
 import AppBlock from "../components/AppBlock";
@@ -27,100 +27,48 @@ if(Marty.isBrowser) {
 // Import the API from https://github.com/engineersamuel/javahighcpu
 import { findOffenders, parseTop, parseThreadDumps } from "javahighcpu";
 
-
 class HomePage extends React.Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             topFile: null,
-            topOutput: null,
             threadDumpsFile: null,
-            threadDumpsOutput: null,
             errors: [],
             cpuThresholdInputValue: 40,
             workerWorking: false
         };
     }
-    onTopDrop(files) {
-        let reader = new FileReader(),
-            self = this;
-        reader.onload = function (e) {
-            self.setState({
-                topFile: files[0],
-                topOutput: reader.result
-            });
-        };
-        reader.readAsText(files[0], "utf-8");
+    topDrop(files) {
+        this.setState({topFile: files[0]})
     }
-    onThreadDumpsDrop(files) {
-        let reader = new FileReader();
-        reader.onload = function (e) {
-            this.setState({
-                threadDumpsFile: files[0],
-                threadDumpsOutput: reader.result
-            });
-        }.bind(this);
-        reader.readAsText(files[0], "utf-8");
+    threadDrop(files) {
+        this.setState({threadDumpsFile: files[0]})
     }
-    //renderFileDrops() {
-    //    let topDropPanel = this.state.topFile ? <FileDropDisplay header="High CPU file" file={this.state.topFile}></FileDropDisplay> : null;
-    //    let threadDumpsDropPanel = this.state.threadDumpsFile ? <FileDropDisplay header="Thread Dumps file" file={this.state.threadDumpsFile}></FileDropDisplay> : null;
-    //    return <div>
-    //        {topDropPanel}
-    //        {threadDumpsDropPanel}
-    //    </div>;
-    //}
-    analyzeValid() {
-        return (this.state.topFile != null && this.state.threadDumpsFile != null);
+    checkInput() {
+        return this.state.topFile != null && this.state.threadDumpsFile != null
     }
     renderAnalyzeButton() {
-        if(this.analyzeValid()) {
+        if(this.checkInput()) {
             return <Button onClick={this.analyze.bind(this)}>Analyze</Button>
         }
         return <Button disabled onClick={this.analyze.bind(this)}>Analyze</Button>
     }
     reset() {
         this.setState({
+            errors: [],
             topFile: null,
-            threadDumpsFile: null,
-            errors: []
+            threadDumpsFile: null
         });
+        this.refs.topInputRef.reset();
+        this.refs.threadInputRef.reset();
         let router = this.context.router;
         router.transitionTo("home");
     }
     renderClearButton() {
-        if(this.analyzeValid()) {
+        if(this.checkInput()) {
             return <Button onClick={this.reset.bind(this)}>Reset</Button>
         }
         return <Button disabled onClick={this.reset.bind(this)}>Reset</Button>
-    }
-    renderDropzoneTopText() {
-        if(this.state.topFile == null) {
-            return <div>Drop the top high-cpu.out here</div>
-        }
-        let iconClasses = {
-            'fa': true,
-            'fa-check': true,
-            'green': true
-        };
-        return <div>
-            <i className={cx(iconClasses)}></i>&nbsp;
-            {this.state.topFile.name}
-        </div>
-    }
-    renderDropzoneThreadText() {
-        if(this.state.threadDumpsFile == null) {
-            return <div>Drop the high-cpu-tdump.out here</div>
-        }
-        let iconClasses = {
-            'fa': true,
-            'fa-check': true,
-            'green': true
-        };
-        return <div>
-            <i className={cx(iconClasses)}></i>&nbsp;
-            {this.state.threadDumpsFile.name}
-        </div>
     }
     componentDidMount() {
         this.readFilesWorker = new Worker;
@@ -198,6 +146,7 @@ class HomePage extends React.Component {
         let containerCx = {
             'home': loading
         };
+        let divInstructionsStyle = {height: 350};
         return (
             <Grid className={cx(containerCx)}>
                 <Row>
@@ -207,39 +156,72 @@ class HomePage extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col md={8}>
-                        <AppBlock title="Usage">
-                            <ul>
-                                <li>Download the appropriate high_cpu_*.tar.gz script from <a target="_blank" href="https://access.redhat.com/solutions/46596">How do I identify high CPU utilization by Java threads on Linux/Solaris</a></li>
-                                <li>Run the script per instructions on the solution</li>
-                                <li>Drag and drop the resulting high-cpu.out and high-cpu-tdump.out to the right</li>
-                                <li>Click Analyze!</li>
-                            </ul>
-                        </AppBlock>
+                    <Col xs={12} sm={6} md={4} mdOffset={2}>
+                        <div className="app-block app-block-step" style={divInstructionsStyle}>
+                            <div className="title">Download</div>
+                            <div className="content">
+                                <i className="fa fa-download featured"></i>
+                                <p>Download the appropriate high_cpu_*.tar.gz script from <a href="#">How do I identify high CPU utilization by Java threads on Linux/Solaris</a></p>
+                            </div>
+                        </div>
                     </Col>
-                    <Col md={4}>
-                        <AppBlock title="Dropzone">
-                            <Dropzone className="dropzone" onDrop={this.onTopDrop.bind(this)} style={{color: 'black'}}>
-                                {this.renderDropzoneTopText()}
-                            </Dropzone>
-                            <Spacer />
-                            <Dropzone className="dropzone" onDrop={this.onThreadDumpsDrop.bind(this)} style={{color: 'black'}}>
-                                {this.renderDropzoneThreadText()}
-                            </Dropzone>
-                            <Spacer />
-                            {this.renderAnalyzeButton()}&nbsp;
-                            {this.renderClearButton()}&nbsp;
-                            {this.renderWorkerSpinner()}
-                            <Spacer />
+                    <Col xs={12} sm={6} md={4}>
+                        <div className="app-block app-block-step" style={divInstructionsStyle}>
+                            <div className="title">Run the Script</div>
+                            <div className="content">
+                                <i className="fa fa-code featured"></i>
+                                <p>Run the script per instructions on the solution.</p>
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+                <Row className="row-tall">
+                    <Col sm={12}>
+                        <h2 className="title text-center">
+                            <strong>Drag and drop the resulting high-cpu.out and high-cpu-tdump.out</strong>
+                        </h2>
+                    </Col>
+                </Row>
+                <Row className="row-tall">
+                    <Col xs={12} sm={6} mdOffset={1} md={5}>
+                        <Dropzone className="dropzone"
+                                  ref="topInputRef"
+                                  onDrop={this.topDrop.bind(this)}
+                                  text="Drop the top high-cpu.out here"/>
+                    </Col>
+                    <Col xs={12} sm={6} md={5}>
+                        <Dropzone className="dropzone"
+                                  ref="threadInputRef"
+                                  onDrop={this.threadDrop.bind(this)}
+                                  text="Drop the top high-cpu-tdump.output here"/>
+                    </Col>
+                </Row>
+                <Row className="row-tall">
+                    <Col sm={12}>
+                        <h2 className="title text-center">
+                            <strong>Select the CPU Threshold</strong>
+                        </h2>
+                    </Col>
+                </Row>
+                <Row className="row-tall">
+                    <Col sm={2} md={3} lg={3} className="center-block">
+                    </Col>
+                    <form className="form-inline">
+                        <div className="form-group">
                             <Input
+                                id="cpuThresholdInput"
+                                className="text-right"
                                 ref="cpuThresholdInput"
                                 type='text'
                                 value={this.state.cpuThresholdInputValue}
                                 onChange={this.handleCpuThresholdChange.bind(this)}
                                 addonBefore='CPU Threshold'
                                 addonAfter='%' />
-                        </AppBlock>
-                    </Col>
+                        </div>&nbsp;
+                        {this.renderAnalyzeButton()}&nbsp;
+                        {this.renderClearButton()}&nbsp;
+                        {this.renderWorkerSpinner()}
+                    </form>
                 </Row>
                 <Row>
                     <hr/>

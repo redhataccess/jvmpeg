@@ -52,7 +52,6 @@
     "raw-loader": "~0.5.1",
     "react": "^0.13.3",
     "react-bootstrap": "~0.23.5",
-    "react-dropzone": "~1.2.2",
     "react-hot-loader": "^1.2.7",
     "react-proxy-loader": "^0.3.4",
     "react-router": "^0.13.3",

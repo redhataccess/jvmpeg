@@ -2,6 +2,13 @@ body {
     background: #eee;
 }
 
+/*.center-block {*/
+    /*display: block;*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*float: none !important;*/
+/*}*/
+
 .home {
     opacity: 1;
 }
@@ -23,25 +30,3 @@ body {
     float: right;
 }
 
-.dropzone {
-    /*margin-left: 10px;*/
-    /*margin-right: 10px;*/
-    /*width: 250px !important;*/
-    width: 100% !important;
-    height: 100px !important;
-    border: 1px dashed;
-    cursor: pointer;
-}
-
-.dropzone:hover {
-    background-color: #bfb;
-}
-
-.dropzone div {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.green {
-    color: green;
-}

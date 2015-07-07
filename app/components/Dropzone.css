@@ -1,0 +1,22 @@
+.drag-over {
+    background-color: #bfb;
+}
+
+.dropzone {
+    /*margin-left: 10px;*/
+    /*margin-right: 10px;*/
+    /*width: 250px !important;*/
+    width: 100% !important;
+    height: 100px !important;
+    border: 1px dashed;
+    cursor: pointer;
+}
+
+.dropzone div {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.green {
+    color: green;
+}
