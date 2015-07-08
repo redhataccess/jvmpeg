@@ -84,8 +84,9 @@ var Dropzone = React.createClass({
 
     render: function() {
         let divClassesHash = {};
-        let className = this.props.className || 'dropzone';
-        divClassesHash[className] = true;
+        // dropzone is always set now, but with the addition of another optional classname
+        if (this.props.className) divClassesHash[this.props.className] = true;
+        divClassesHash['dropzone'] = true;
         divClassesHash['drag-over'] = this.state.isDragActive;
         divClassesHash['active'] = this.state.isDragActive;
 

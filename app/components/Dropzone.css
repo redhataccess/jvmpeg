@@ -2,7 +2,7 @@
     background-color: #bfb;
 }
 
-.dropzone {
+.jvmpeg-dropzone {
     /*margin-left: 10px;*/
     /*margin-right: 10px;*/
     /*width: 250px !important;*/
@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-.dropzone div {
+.jvmpeg-dropzone div {
     text-align: center;
     margin-top: 20px;
 }

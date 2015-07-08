@@ -184,13 +184,13 @@ class HomePage extends React.Component {
                 </Row>
                 <Row className="row-tall">
                     <Col xs={12} sm={6} mdOffset={1} md={5}>
-                        <Dropzone className="dropzone"
+                        <Dropzone className="jvmpeg-dropzone"
                                   ref="topInputRef"
                                   onDrop={this.topDrop.bind(this)}
                                   text="Drop the top high-cpu.out here"/>
                     </Col>
                     <Col xs={12} sm={6} md={5}>
-                        <Dropzone className="dropzone"
+                        <Dropzone className="jvmpeg-dropzone"
                                   ref="threadInputRef"
                                   onDrop={this.threadDrop.bind(this)}
                                   text="Drop the top high-cpu-tdump.output here"/>
