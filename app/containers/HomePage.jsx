@@ -161,7 +161,7 @@ class HomePage extends React.Component {
                             <div className="title">Download</div>
                             <div className="content">
                                 <i className="fa fa-download featured"></i>
-                                <p>Download the appropriate high_cpu_*.tar.gz script from <a href="#">How do I identify high CPU utilization by Java threads on Linux/Solaris</a></p>
+                                <p>Download high_cpu_linux.tar.gz script from the bottom of <a target="_blank" href="https://access.redhat.com/solutions/46596">How do I identify high CPU utilization by Java threads on Linux/Solaris</a></p>
                             </div>
                         </div>
                     </Col>
@@ -170,7 +170,7 @@ class HomePage extends React.Component {
                             <div className="title">Run the Script</div>
                             <div className="content">
                                 <i className="fa fa-code featured"></i>
-                                <p>Run the script per instructions on the solution.</p>
+                                <p>Run the high_cpu_linux_jstack.sh script per instructions on the solution.</p>
                             </div>
                         </div>
                     </Col>
