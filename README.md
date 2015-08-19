@@ -35,6 +35,8 @@ Just clone this repo and change the `origin` git remote.
 
 ```text
 npm install
+npm run hot-dev-server
+npm run start-dev
 ```
 
 ## Hot Module Replacement development server

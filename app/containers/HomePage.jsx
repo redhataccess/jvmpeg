@@ -187,13 +187,13 @@ class HomePage extends React.Component {
                         <Dropzone className="jvmpeg-dropzone"
                                   ref="topInputRef"
                                   onDrop={this.topDrop.bind(this)}
-                                  text="Drop the top high-cpu.out here"/>
+                                  text={(this.state.topFile && this.state.topFile.name) || "Drop the top high-cpu.out here"}/>
                     </Col>
                     <Col xs={12} sm={6} md={5}>
                         <Dropzone className="jvmpeg-dropzone"
                                   ref="threadInputRef"
                                   onDrop={this.threadDrop.bind(this)}
-                                  text="Drop the top high-cpu-tdump.output here"/>
+                                  text={(this.state.threadDumpsFile && this.state.threadDumpsFile.name) || "Drop the top high-cpu-tdump.out here"}/>
                     </Col>
                 </Row>
                 <Row className="row-tall">
